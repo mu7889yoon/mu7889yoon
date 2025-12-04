@@ -1,0 +1,7 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'よ〜んの雑記'
+theme = 'm10c'
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
