@@ -1,7 +1,4 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
+baseURL = 'https://mu7889yoon.github.io/mu7889yoon/'
+languageCode = 'ja-jp'
 title = 'よ〜んの雑記'
 theme = 'm10c'
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'
