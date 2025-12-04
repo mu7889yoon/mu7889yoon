@@ -3,9 +3,6 @@ languageCode = 'ja-jp'
 title = 'よ〜んの雑記'
 theme = 'm10c'
 
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'
 [module]
   [module.hugoVersion]
     extended = true
@@ -13,7 +10,6 @@ theme = 'm10c'
 
 [params]
   author = 'mu7889yoon / yuta nakamura'
-  avatar = 'images/avatar.jpg'
   description = '''
     Live in Kyoto(Japan)
     Osaka Electro-Communication University
