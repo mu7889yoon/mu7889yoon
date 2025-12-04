@@ -13,10 +13,15 @@ theme = 'm10c'
 
 [menu]
   [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
+    identifier = 'home'
+    name = 'Home'
+    url = '/'
     weight = 1
+  [[menu.main]]
+    identifier = 'about'
+    name = 'About'
+    url = '/about/'
+    weight = 2
 
 [params]
   author = 'mu7889yoon / yuta nakamura'
