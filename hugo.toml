@@ -13,7 +13,7 @@ theme = 'm10c'
 
 [params]
   author = 'mu7889yoon / yuta nakamura'
-  avatar = 'public/avater.jpg'
+  avatar = 'images/avater.jpg'
   description = '''
     Live in Kyoto(Japan)
     Osaka Electro-Communication University
