@@ -8,6 +8,13 @@ theme = 'm10c'
     extended = true
     min = "0.128.0"
 
+[params.style]
+  darkestColor = "#0b132b"
+  darkColor = "#1c2541"
+  lightColor = "#cfdbd5"
+  lightestColor = "#e8eddf"
+  primaryColor = "#d99124ff"
+
 [pagination]
   pagerSize = 10
 
@@ -25,17 +32,20 @@ theme = 'm10c'
 
 [params]
   author = 'mu7889yoon / yuta nakamura'
-  description = '''
-    Live in Kyoto(Japan)
-    Osaka Electro-Communication University
-    Bachelor of Science in Information Technology
-    2025 Japan AWS Jr. Champions
-  '''
+  description = '　'
 [[params.social]]
-  icon = "brand-github"
-  name = "Github"
-  url = "https://github.com/mu7889yoon"
+  icon = 'brand-github'
+  name = 'Github'
+  url = 'https://github.com/mu7889yoon'
 [[params.social]]
-  icon = "brand-x"
-  name = "X"
-  url = "https://twitter.com/Tesla_yoon"
+  icon = 'brand-x'
+  name = 'X'
+  url = 'https://twitter.com/Tesla_yoon'
+[[params.social]]
+  icon = 'brand-speakerdeck'
+  name = 'speakerdeck'
+  url ='https://speakerdeck.com/mu7889yoon'
+[[params.social]]
+  icon = 'brand-connpass'
+  name = 'connpass'
+  url ='https://connpass.com/user/mu7889yoon'
