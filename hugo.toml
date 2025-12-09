@@ -33,6 +33,7 @@ theme = 'm10c'
 [params]
   author = 'mu7889yoon / yuta nakamura'
   description = '　'
+  avatar = 'mu7889yoon/image.png'
 [[params.social]]
   icon = 'brand-github'
   name = 'Github'
