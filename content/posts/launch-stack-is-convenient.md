@@ -1,5 +1,5 @@
 +++
-date = '2025-12-14T11:21:46+09:00'
+date = '2025-12-14T00:00:00+09:00'
 draft = false
 tags = ['tech', 'tips', 'aws', 'cloudformation']
 title = 'CloudformationのLaunch Stackボタンが便利'
@@ -17,7 +17,7 @@ title = 'CloudformationのLaunch Stackボタンが便利'
 
 
 
-```shell
+```bash
 AWS_REGION=
 STACK_NAME=
 TEMPLATE_S3_URL=

@@ -15,17 +15,18 @@
     import { mount } from "https://cdn.jsdelivr.net/npm/@stlite/browser@0.94.0/build/stlite.js"
     mount(
       {
-        requirements: [],
-        entrypoint: 'pages/streamlit_app.py',
+        requirements: ["matplotlib", "requests", "pydeck"],        
+        entrypoint: 'streamlit_app.py',
         files: {
-          'pages/streamlit_app.py': `import streamlit as st
+          'streamlit_app.py': `import streamlit as st
 
-st.sidebar.page_link(
-    page='https://mu7889yoon.github.io/',
-    label='**よ〜んの雑記**',
-    icon='📝',
-)
 `,
+          'pages/pydeck-chart.py': {
+            url: './pages/pydeck-chart.py',
+          },
+          'pages/hello-world.py': {
+            url: './pages/hello-world.py',
+          },
         }
       },
       document.getElementById("root")
