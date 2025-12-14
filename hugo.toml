@@ -3,7 +3,6 @@ languageCode = 'ja-jp'
 title = 'よ〜んの雑記'
 theme = 'm10c'
 
-
 [module]
   [module.hugoVersion]
     extended = true
@@ -38,13 +37,18 @@ theme = 'm10c'
   [[menu.main]]
     identifier = 'tools'
     name = 'Tools'
-    url = '/stlite/index.html'
+    url = '/stlite/'
     weight = 3
+  [[menu.main]]
+    identifier = 'sfn-exercise'
+    name = 'Step Functions Exercise'
+    url = 'https://mu7889yoon.github.io/sfn-exercise/index.html'
     
 [params]
   author = 'mu7889yoon / yuta nakamura'
   description = '　'
   avatar = 'mu7889yoon/image.png'
+  menu_item_separator = '<br>'
 [[params.social]]
   icon = 'brand-github'
   name = 'Github'
