@@ -18,18 +18,18 @@
         requirements: [],
         entrypoint: 'pages/streamlit_app.py',
         files: {
-          'pages/streamlit_app.py': {
-            url: './pages/streamlit_app.py',
-          },
-          'pages/hello-world.py': {
-            url: './pages/hello-world.py',
-          },
+          'pages/streamlit_app.py': `import streamlit as st
+
+st.sidebar.page_link(
+    page='https://mu7889yoon.github.io/',
+    label='**よ〜んの雑記**',
+    icon='📝',
+)
+`,
         }
       },
       document.getElementById("root")
     )
-
-
   </script>
 </body>
 
