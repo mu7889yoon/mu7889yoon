@@ -1,12 +1,13 @@
 baseURL = 'https://mu7889yoon.github.io/'
 languageCode = 'ja-jp'
 title = 'よ〜んの雑記'
-theme = 'm10c'
 
 [module]
   [module.hugoVersion]
     extended = true
     min = "0.128.0"
+  [[module.imports]]
+    path = 'github.com/vaga/hugo-theme-m10c'
 
 [params.style]
   darkestColor = "#0b132b"
