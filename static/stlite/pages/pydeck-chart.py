@@ -21,8 +21,6 @@ import pydeck as pdk
 
 import streamlit as st
 
-st.sidebar.markdown("### 📚 [備忘録へ戻る](/)")
-
 # Empty chart.
 
 st.pydeck_chart()
