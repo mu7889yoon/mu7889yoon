@@ -35,6 +35,11 @@ theme = 'm10c'
     name = 'Tags'
     url = '/tags/'
     weight = 2
+  [[menu.main]]
+    identifier = 'tools'
+    name = 'Tools'
+    url = '/stlite/index.html'
+    weight = 3
     
 [params]
   author = 'mu7889yoon / yuta nakamura'
