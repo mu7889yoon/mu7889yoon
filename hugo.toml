@@ -1,7 +1,8 @@
-baseURL = 'https://mu7889yoon.github.io/mu7889yoon/'
+baseURL = 'https://mu7889yoon.github.io/'
 languageCode = 'ja-jp'
 title = 'よ〜んの雑記'
 theme = 'm10c'
+
 
 [module]
   [module.hugoVersion]
@@ -29,10 +30,16 @@ theme = 'm10c'
     name = 'About'
     url = '/about/'
     weight = 2
-
+  [[menu.main]]
+    identifier = 'tags'
+    name = 'Tags'
+    url = '/tags/'
+    weight = 2
+    
 [params]
   author = 'mu7889yoon / yuta nakamura'
   description = '　'
+  avatar = 'mu7889yoon/image.png'
 [[params.social]]
   icon = 'brand-github'
   name = 'Github'
