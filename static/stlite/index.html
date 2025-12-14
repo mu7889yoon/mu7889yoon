@@ -13,24 +13,37 @@
   <div id="root"></div>
   <script type="module">
     import { mount } from "https://cdn.jsdelivr.net/npm/@stlite/browser@0.94.0/build/stlite.js"
-    mount(
-      {
-        requirements: ["matplotlib", "requests", "pydeck"],        
-        entrypoint: 'streamlit_app.py',
-        files: {
-          'streamlit_app.py': `import streamlit as st
+    
+    async function loadApp() {
+      const [pydeckCode, helloCode] = await Promise.all([
+        fetch('./pages/pydeck-chart.py').then(r => r.text()),
+        fetch('./pages/hello-world.py').then(r => r.text())
+      ]);
 
-`,
-          'pages/pydeck-chart.py': {
-            url: './pages/pydeck-chart.py',
-          },
-          'pages/hello-world.py': {
-            url: './pages/hello-world.py',
-          },
-        }
-      },
-      document.getElementById("root")
-    )
+      mount(
+        {
+          requirements: ["matplotlib", "requests", "pydeck"],        
+          entrypoint: 'streamlit_app.py',
+          files: {
+            'streamlit_app.py': {
+              data: `import streamlit as st
+st.title('Tools')
+st.write("左のサイドバーからツールを選択してください。")
+`
+            },
+            'pages/pydeck-chart.py': {
+              data: pydeckCode
+            },
+            'pages/hello-world.py': {
+              data: helloCode
+            },
+          }
+        },
+        document.getElementById("root")
+      )
+    }
+
+    loadApp().catch(console.error);
   </script>
 </body>
 
