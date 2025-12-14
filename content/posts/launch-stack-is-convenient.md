@@ -1,6 +1,6 @@
 +++
 date = '2025-12-14T11:21:46+09:00'
-draft = true
+draft = false
 tags = ['tech', 'tips', 'aws', 'cloudformation']
 title = 'CloudformationのLaunch Stackボタンが便利'
 +++
