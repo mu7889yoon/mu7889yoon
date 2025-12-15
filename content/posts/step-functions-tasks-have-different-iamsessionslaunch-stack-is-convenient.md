@@ -2,7 +2,7 @@
 date = '2025-12-13T00:00:00+09:00'
 draft = false
 tags = ['tech', 'tips', 'aws', 'step-functions']
-title = 'Step Functionsはタスク毎にIAMのセッションが変わる(GenerateServiceLastAccessedDetails → GetServiceLastAccessedDetailsでお困りの方必見)'
+title = 'Step Functionsはタスク毎にIAMのセッションが変わる'
 +++
 
 よ〜んです。
@@ -36,14 +36,15 @@ aws iam get-service-last-accessed-details --job-id $JOB_ID
 
 これらはAWS APIを組み合わせたものですので、Step Functionsで実行可能ではないか？と思い、以下のようなState Machineを組んでみたところ、意図した動作をせず、ハマりまくったため、調査したことを記録します。
 
-## 調査
+## 調べてみたこと
+
+以降、`GenerateServiceLastAccessedDetails`は`GenereteService`、`GetServiceLastAccessedDetails`は`GetService`とさせていただきます。
+
 ### エラー内容
 
-### Step Functionsの実行ログを見てみる
+### CloudShellで生成したJobIdを使ってStep FunctionsでGetService　してみる
 
-### CloudShellで生成した JobId を使ってStep FunctionsでGetService　してみる
-
-### Step Functionsで生成した JobId を使ってCloudShellでGetServiceしてみる
+### Step Functionsで生成したJobIdを使ってCloudShellでGetServiceしてみる
 
 ### API Documentを読む
 
@@ -52,7 +53,9 @@ aws iam get-service-last-accessed-details --job-id $JOB_ID
 
 ## まとめ
 
-Step Functionsの仕様を知りつつ、`GenerateServiceLastAccessedDetails`のハマりどころと言うような内容でした。
+Step Functionsの仕様を知りつつ、`GenerateServiceLastAccessedDetails`のハマりどころって感じでした。
+
+`JobId`が帰ってくるAPIはもしかしたら本件となるかもしれません。
 
 ## 追記
 
