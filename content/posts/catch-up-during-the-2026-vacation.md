@@ -29,3 +29,4 @@ title = 'キャッチアップしていきたい技術たち(2025→2026年末�
   - github pagesで作りたい
 - terraform
   - cf2tfとか触りたい
+- cloudformation import
