@@ -65,4 +65,8 @@ title = 'よ〜んの雑記'
 [[params.social]]
   icon = 'brand-connpass'
   name = 'connpass'
-  url ='https://connpass.com/user/mu7889yoon'
+  url = 'https://connpass.com/user/mu7889yoon'
+[[params.social]]
+  icon = 'brand-builder-center'
+  name = 'builder center'
+  url = 'https://builder.aws.com/community/@mu7889yoon'
