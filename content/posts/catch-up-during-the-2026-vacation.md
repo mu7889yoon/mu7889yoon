@@ -14,15 +14,18 @@ title = 'キャッチアップしていきたい技術たち(2025→2026年末�
 
 # 年末年始で触ってみたい技術など
 - htmx
-- bedrock 強化ファインチューニングしたい
+- bedrock 強化ファインチューニング
 - Aurora DSQL
     - TiDBとの比較もしたい
 - wasm
     - edge系の世界に触れたい
-    - hono
+- hono
 - ご家庭FaaS
 - rust
-- stlite で5個機能作る
+- stlite
+  - 5個機能作る
 - kintone 
 - pwa
+  - github pagesで作りたい
 - terraform
+  - cf2tfとか触りたい
