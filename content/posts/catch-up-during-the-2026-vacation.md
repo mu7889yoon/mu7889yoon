@@ -22,6 +22,8 @@ title = 'キャッチアップしていきたい技術たち(2025→2026年末�
 - hono
 - ご家庭FaaS
 - rust
+  - moonbit
+    - wasmの文脈でもある
 - stlite
   - 5個機能作る
 - kintone 
