@@ -2,6 +2,10 @@ baseURL = 'https://mu7889yoon.github.io/'
 languageCode = 'ja-jp'
 title = 'よ〜んの雑記'
 
+[services]
+  [services.googleAnalytics]
+    id = 'G-FRB2TT0734'
+
 [module]
   [module.hugoVersion]
     extended = true
