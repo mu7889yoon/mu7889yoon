@@ -1,6 +1,6 @@
 +++
-date = '2025-12-24T00:00:00+09:00'
-draft = true
+date = '2025-12-24T12:00:00+09:00'
+draft = false
 tags = ['tech', 'tips', 'aws', 'step-functions']
 title = 'Step Functionsで対応してないAWS APIは使えない'
 +++
