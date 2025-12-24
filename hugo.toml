@@ -4,7 +4,7 @@ title = 'よ〜んの雑記'
 
 [services]
   [services.googleAnalytics]
-    id = 'G-FRB2TT0734'
+    id = 'G-9NZ6DBN19T'
 
 [module]
   [module.hugoVersion]
