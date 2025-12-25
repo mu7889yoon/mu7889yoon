@@ -14,6 +14,7 @@ title = 'キャッチアップしていきたい技術たち(2025→2026年末�
 
 # 年末年始で触ってみたい技術など
 - htmx
+  - [htmxとServer Sent Eventsを使ってカウンターを作る](/posts/creating-a-counter-with-htmx-and-server-sent-events/)
 - bedrock 強化ファインチューニング
 - Aurora DSQL
     - TiDBとの比較もしたい
