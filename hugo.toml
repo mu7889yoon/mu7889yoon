@@ -2,6 +2,9 @@ baseURL = 'https://mu7889yoon.github.io/'
 languageCode = 'ja-jp'
 title = 'よ〜んの雑記'
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [services]
   [services.googleAnalytics]
     id = 'G-9NZ6DBN19T'
@@ -39,15 +42,6 @@ title = 'よ〜んの雑記'
     name = 'Tags'
     url = '/tags/'
     weight = 2
-  [[menu.main]]
-    identifier = 'tools'
-    name = 'Tools'
-    url = '/stlite/'
-    weight = 3
-  [[menu.main]]
-    identifier = 'sfn-exercise'
-    name = 'Step Functions Exercise'
-    url = 'https://mu7889yoon.github.io/sfn-exercise/index.html'
     
 [params]
   author = 'mu7889yoon / yuta nakamura'

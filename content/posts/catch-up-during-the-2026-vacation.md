@@ -1,7 +1,7 @@
 +++
 date = '2025-12-17T00:00:00+09:00'
 draft = false
-tags = ['tech', 'memo']
+tags = ['tech', 'memo', 'catch-up-2025-2026-vacation']
 title = 'キャッチアップしていきたい技術たち(2025→2026年末年始休暇編)'
 +++
 

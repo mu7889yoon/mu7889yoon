@@ -1,6 +1,7 @@
 +++
 date = '2025-12-25T22:06:37+09:00'
 draft = false
+tags = ['tips', 'tech', 'htmx', 'catch-up-2025-2026-vacation']
 title = 'htmxとServer Sent Eventsを使ってカウンターを作る'
 +++
 
