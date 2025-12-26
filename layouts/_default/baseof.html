@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+  <head>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} // {{ .Site.Title }}{{ end }}</title>
+    <link rel="shortcut icon" href="{{ .Site.Params.favicon | default "/favicon.ico" }}" />
+    <meta charset="utf-8" />
+    {{ hugo.Generator }}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="{{ .Site.Params.author | default "John Doe" }}" />
+    <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+    {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | css.Sass | resources.Minify | resources.Fingerprint -}}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+    {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+    {{ end }}
+
+    {{ template "_internal/google_analytics.html" . }}
+
+    {{/* OGP (Open Graph Protocol) */}}
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    {{- if .IsPage }}
+    {{- $images := .Resources.ByType "image" }}
+    {{- $featured := $images.GetMatch "*feature*" }}
+    {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end }}
+    {{- with $featured }}
+    <meta property="og:image" content="{{ .Permalink }}"/>
+    {{- else }}
+    {{- /* サムネイル画像をMarkdownファイル名から自動取得 */}}
+    {{- $filename := path.Base .File.Path }}
+    {{- $thumbnailName := replace $filename ".md" ".png" }}
+    {{- $thumbnailPath := printf "images/thumbnails/%s" $thumbnailName }}
+    {{- $thumbnail := resources.Get $thumbnailPath }}
+    {{- if $thumbnail }}
+    <meta property="og:image" content="{{ $thumbnail.Permalink }}"/>
+    {{- else }}
+    {{- /* static/thumbnails/ からも確認 */}}
+    {{- $staticThumbnail := printf "/images/thumbnails/%s" $thumbnailName }}
+    {{- if fileExists (printf "static%s" $staticThumbnail) }}
+    <meta property="og:image" content="{{ $staticThumbnail | absURL }}"/>
+    {{- else if .Site.Params.defaultOgImage }}
+    <meta property="og:image" content="{{ .Site.Params.defaultOgImage | absURL }}"/>
+    {{- end }}
+    {{- end }}
+    {{- end }}
+    {{- if .Date }}
+    <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}"/>
+    {{- end }}
+    {{- if .Lastmod }}
+    <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}"/>
+    {{- end }}
+    {{- else }}
+    {{- with .Site.Params.defaultOgImage }}
+    <meta property="og:image" content="{{ . | absURL }}"/>
+    {{- end }}
+    {{- end }}
+
+    {{/* Twitter Card */}}
+    <meta name="twitter:card" content="summary_large_image" />
+    {{- with .Site.Params.twitterSite }}
+    <meta name="twitter:site" content="{{ . }}" />
+    {{- end }}
+    {{- with .Site.Params.twitterCreator }}
+    <meta name="twitter:creator" content="{{ . }}" />
+    {{- end }}
+    <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+    <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary | truncate 200 }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+    {{- if .IsPage }}
+    {{- $images := .Resources.ByType "image" }}
+    {{- $featured := $images.GetMatch "*feature*" }}
+    {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end }}
+    {{- with $featured }}
+    <meta name="twitter:image" content="{{ .Permalink }}"/>
+    {{- else }}
+    {{- $filename := path.Base .File.Path }}
+    {{- $thumbnailName := replace $filename ".md" ".png" }}
+    {{- $thumbnailPath := printf "images/thumbnails/%s" $thumbnailName }}
+    {{- $thumbnail := resources.Get $thumbnailPath }}
+    {{- if $thumbnail }}
+    <meta name="twitter:image" content="{{ $thumbnail.Permalink }}"/>
+    {{- else }}
+    {{- $staticThumbnail := printf "/images/thumbnails/%s" $thumbnailName }}
+    {{- if fileExists (printf "static%s" $staticThumbnail) }}
+    <meta name="twitter:image" content="{{ $staticThumbnail | absURL }}"/>
+    {{- else if .Site.Params.defaultOgImage }}
+    <meta name="twitter:image" content="{{ .Site.Params.defaultOgImage | absURL }}"/>
+    {{- end }}
+    {{- end }}
+    {{- end }}
+    {{- else }}
+    {{- with .Site.Params.defaultOgImage }}
+    <meta name="twitter:image" content="{{ . | absURL }}"/>
+    {{- end }}
+    {{- end }}
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="{{ "" | relURL }}"><img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author | default "John Doe" }}" /></a>
+      <span class="app-header-title">{{ .Site.Title }}</span>
+      {{- with .Site.Menus.main }}
+      <nav class="app-header-menu">
+        {{- range $key, $item := . }}
+          {{- if ne $key 0 }}
+            {{ $.Site.Params.menu_item_separator | default " - " | safeHTML }}
+          {{ end }}
+          <a class="app-header-menu-item" href="{{ $item.URL }}">{{ $item.Name }}</a>
+        {{- end }}
+      </nav>
+      {{- end }}
+      <p>{{ .Site.Params.description | default "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium." }}</p>
+      {{- with .Site.Params.social }}
+      <div class="app-header-social">
+        {{ range . }}
+          <a href="{{ .url }}" target="_blank" rel="noreferrer noopener me">
+            {{ partial "icon.html" (dict "ctx" $ "name" .icon "title" .name) }}
+          </a>
+        {{ end }}
+      </div>
+      {{- end }}
+    </header>
+    <main class="app-container">
+      {{ block "main" . }}
+        {{ .Content }}
+      {{ end }}
+    </main>
+  </body>
+</html>
