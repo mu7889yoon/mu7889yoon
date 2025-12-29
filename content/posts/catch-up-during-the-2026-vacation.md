@@ -21,6 +21,7 @@ title = 'キャッチアップしていきたい技術たち(2025→2026年末�
 - wasm
     - edge系の世界に触れたい
 - hono
+  - [Honoでカウンターのバックエンドを作る](/posts/creating-the-backend-of-the-counter-with-hono)
 - ご家庭FaaS
 - rust
   - moonbit
