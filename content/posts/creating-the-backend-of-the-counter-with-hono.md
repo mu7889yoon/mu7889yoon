@@ -5,7 +5,7 @@ tags = ['tips', 'tech', 'hono', 'catch-up-2025-2026-vacation']
 title = 'Honoでカウンターのバックエンドを作る'
 +++
 
-[Serverless Days 2025]()ぐらいからエッジコンピューティングにお熱なよ〜んです。
+[Serverless Days 2025](https://tokyo.serverlessdays.io/)ぐらいからエッジコンピューティングにお熱なよ〜んです。
 
 [Hono[炎]](https://hono.dev/)というフレームワークがあるのは存じ上げておりましたが、最近エッジコンピューティングに興味を持ち始めたので、触ってみます。
 
@@ -31,6 +31,8 @@ Super clean APIs. First-class TypeScript support. Now, we've got "Types".
 ```
 
 [先日の記事](/posts/creating-a-counter-with-htmx-and-server-sent-events/)のバックエンドのコードをhonoを使って書き換えてみようと思います。
+
+ちなみに全然関係ないですが、私は「青く燃える炎」が好きです。
 
 ## Honoで実装してみた
 
@@ -155,5 +157,3 @@ app.get('/api/events', async (c) => {
 Honoのシンプルさや思想には改めて惹かれました。
 
 次回は、Lambda@Edgeを活用した構成でも試してみたいと思います。
-
-全然関係ないですが、私は「青く燃える炎」が好きです。
