@@ -1,0 +1,33 @@
+{{- $hasMermaid := or (.Store.Get "hasMermaid") (.HasShortcode "mermaid") -}}
+{{- if $hasMermaid -}}
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@11.12.2/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async function () {
+      const m = window.mermaid;
+      if (!m) return;
+      
+      if (typeof m.registerIconPacks === "function") {
+        try {
+          m.registerIconPacks([
+            {
+              name: "logos",
+              loader: () =>
+                fetch("https://unpkg.com/@iconify-json/logos@1/icons.json").then((res) => res.json()),
+            },
+          ]);
+        } catch (e) {
+          // eslint-disable-next-line no-console
+          console.warn("[mermaid] registerIconPacks failed", e);
+        }
+      }
+      
+      m.initialize({ startOnLoad: false });
+      try {
+        await m.run({ querySelector: ".mermaid" });
+      } catch (e) {
+        console.warn("[mermaid] run failed", e);
+      }
+    });
+  </script>
+{{- end -}}
+
