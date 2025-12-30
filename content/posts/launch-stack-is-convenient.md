@@ -2,6 +2,7 @@
 date = '2025-12-14T00:00:00+09:00'
 draft = false
 tags = ['tech', 'tips', 'aws', 'cloudformation']
+description = '面倒な操作なくWebブラウザだけでCloudformationをデプロイする方法があったのでシェアします。'
 title = 'CloudformationのLaunch Stackボタンが便利'
 +++
 

@@ -2,6 +2,7 @@
 date = '2025-12-29T10:13:53+09:00'
 draft = false
 tags = ['tips', 'tech', 'hono', 'catch-up-2025-2026-vacation']
+description = 'Honoを使用してLambdalithの構成でバックエンドを記述してみます。'
 title = 'Honoでカウンターのバックエンドを作る'
 +++
 
@@ -30,7 +31,7 @@ Super clean APIs. First-class TypeScript support. Now, we've got "Types".
 >> めっちゃ綺麗なAPI、TypeScriptのサポートは一流やし、Typesも使えるようになったで
 ```
 
-[先日の記事](/posts/creating-a-counter-with-htmx-and-server-sent-events/)のバックエンドのコードをhonoを使って書き換えてみようと思います。
+[先日の記事](/posts/creating-a-counter-with-htmx-and-server-sent-events/)のバックエンドのコードをHonoを使って書き換えてみようと思います。
 
 ちなみに全然関係ないですが、私は「青く燃える炎」が好きです。
 

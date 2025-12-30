@@ -2,6 +2,7 @@
 date = '2025-12-24T12:00:00+09:00'
 draft = false
 tags = ['tech', 'tips', 'aws', 'step-functions']
+description = 'JAWS-UG Osakaで発表した、AWSあるあるの中で、Step Functionsで対応してAWS APIは使えないというあるあるを発表しました。その詳細について本記事で掘り下げます。'
 title = 'Step Functionsで対応してないAWS APIは使えない'
 +++
 

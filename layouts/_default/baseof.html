@@ -7,7 +7,21 @@
     {{ hugo.Generator }}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="{{ .Site.Params.author | default "John Doe" }}" />
-    <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+    {{- /* Description (meta/OGP/Twitter): prefer front matter `description`, then `.Description`, then summary, then site default */ -}}
+    {{- $desc := "" -}}
+    {{- if .IsHome -}}
+    {{- $desc = (.Site.Params.description | default "") -}}
+    {{- else if .Params.description -}}
+    {{- $desc = .Params.description -}}
+    {{- else if .Description -}}
+    {{- $desc = .Description -}}
+    {{- else if .IsPage -}}
+    {{- $desc = .Summary -}}
+    {{- else -}}
+    {{- $desc = (.Site.Params.description | default "") -}}
+    {{- end -}}
+    {{- $desc = ($desc | plainify | htmlEscape | chomp) -}}
+    <meta name="description" content="{{ $desc }}" />
     {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | css.Sass | resources.Minify | resources.Fingerprint -}}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
     {{ with .OutputFormats.Get "rss" -}}
@@ -18,7 +32,7 @@
 
     {{/* OGP (Open Graph Protocol) */}}
     <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
-    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+    <meta property="og:description" content="{{ $desc }}" />
     <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:site_name" content="{{ .Site.Title }}" />
@@ -67,7 +81,7 @@
     <meta name="twitter:creator" content="{{ . }}" />
     {{- end }}
     <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
-    <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary | truncate 200 }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+    <meta name="twitter:description" content="{{ $desc | truncate 200 }}" />
     {{- if .IsPage }}
     {{- $images := .Resources.ByType "image" }}
     {{- $featured := $images.GetMatch "*feature*" }}
