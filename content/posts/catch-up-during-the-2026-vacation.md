@@ -36,4 +36,5 @@ title = 'キャッチアップしていきたい技術たち(2025→2026年末�
   - cf2tfとか触りたい
 - cloudformation import
 - parquet / iceberg / s3 tables
+  - [ParquetとAIエージェントで無駄な出費を特定してみる](/posts/i-want-to-detect-money-wasted-with-parquet/)
 - [chromeの埋め込みAI](https://developer.chrome.com/docs/ai/built-in?hl=ja)
