@@ -34,6 +34,5 @@ title = 'キャッチアップしていきたい技術たち(2025→2026年末�
 - terraform
   - cf2tfとか触りたい
 - cloudformation import
-- parquet / iceberg
-- s3 tables
+- parquet / iceberg / s3 tables
 - [chromeの埋め込みAI](https://developer.chrome.com/docs/ai/built-in?hl=ja)
