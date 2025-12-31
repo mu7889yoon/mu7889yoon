@@ -1,7 +1,7 @@
 +++
 date = '2025-12-31T18:24:50+09:00'
 draft = false
-tags = ['tech', 'prompt-api', 'hono', 'htmx']
+tags = ['tech', 'prompt-api', 'hono', 'htmx', 'catch-up-2025-2026-vacation']
 description = 'ChromeのPrompt APIやIndexedDBなどを使用して、Chromeだけで画像を検索できるアプリケーションを作ってみました。'
 title = 'ChromeのPrompt APIを使い尽くす'
 +++
@@ -54,11 +54,11 @@ req.onupgradeneeded = () => {
 ファイル名は適当だし、フォルダ分けもしてないし。「あの猫のやつ」「サイバー空間で変なサングラスしてパソコン触ってる人」みたいな曖昧な記憶で探せたらいいなと思って作りました。
 
 - Chromeだけで動作
-    -　サーバーへの通信なし。画像データもタグの生成処理もすべてブラウザ内で完結
+    - サーバーへの通信なし。画像データもタグの生成処理もすべてブラウザ内で完結
 - 完全無料
     - ローカルLLMなのでAPIキーも課金も不要。何回使ってもタダ
 - 自然言語で曖昧検索可能
-    -「生き物」で検索すると猫や犬の画像がヒット。タグの完全一致じゃなくて意味的に検索できる
+    - 「生き物」で検索すると猫や犬の画像がヒット。タグの完全一致じゃなくて意味的に検索できる
 - バックエンドレス
     - REST API風のエンドポイントはあるけど、実体はService Worker
 
@@ -187,9 +187,7 @@ async function annotateImage(blob) {
 
 ### フロント
 
-特になし、htmxとtailwindを使って実装した。ここら辺はAIにお任せです。
-
-htmxのおかげでJavaScriptをほとんど書かずにSPA的な動作を実現できています。
+htmxとtailwindを使って実装しました。ここら辺はKiroにお任せです。
 
 ```html
 <input type="file" accept="image/*" multiple
