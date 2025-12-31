@@ -18,7 +18,6 @@ title = 'キャッチアップしていきたい技術たち(2025→2026年末�
   - [htmxとServer Sent Eventsを使ってカウンターを作る](/posts/creating-a-counter-with-htmx-and-server-sent-events/)
 - Bedrock Reinforcement Fine-tuning
   - [Amazon Bedrock Reinforcement Fine-tuningを試してみた](https://www.seeds-std.co.jp/blog/creators/try-reinforcement-fine-tuning/)
- 
 - Aurora DSQL
     - TiDBとの比較もしたい
 - wasm
