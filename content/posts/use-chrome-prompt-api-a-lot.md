@@ -94,7 +94,7 @@ Prompt APIはService Worker内で使えないので、MessageChannelでメイン
 
 ### DB
 
-IndexedDBのラッパーを作りました。Promise化してます。
+IndexedDBのラッパーを作りました。
 
 ```javascript
 export async function getAllImages() {
