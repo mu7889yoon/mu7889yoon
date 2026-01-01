@@ -2,7 +2,7 @@
 date = '2026-01-01T11:02:10+09:00'
 draft = false
 tags = ['poem', 'rewind']
-description = ''
+description = '2025年を反省や良かった点など赤裸々に振り返る'
 title = '2025年の振り返り'
 +++
 
