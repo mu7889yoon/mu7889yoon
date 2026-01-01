@@ -90,6 +90,11 @@ title = '2025年の振り返り'
 - [AWS Community Builders Kansai 目指せ！Amazon Q & KIRO マスターへの道](https://kansai-cbs.connpass.com/event/362381/)に参加 & バイブ登壇
   - ここで一気に知り合いが増えた。
     - <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">続いてのLTはJr.Championの<a href="https://twitter.com/mu7889yoon?ref_src=twsrc%5Etfw">@mu7889yoon</a> さんです！<br>スマホ広告やテレビでよく見るゲームを作ってみたとのことです笑<br><br>ゲーム〜真面目なアプリ実装をしてくれる最高の相棒ですね！<br>これからもQと㌔の統合を追っていってほしいです！<a href="https://twitter.com/hashtag/AWS?src=hash&amp;ref_src=twsrc%5Etfw">#AWS</a> <a href="https://twitter.com/hashtag/AWSCommunityBuilders?src=hash&amp;ref_src=twsrc%5Etfw">#AWSCommunityBuilders</a> <a href="https://t.co/X395dVUCBo">pic.twitter.com/X395dVUCBo</a></p>&mdash; 🍎Yuki Ogawa🍎 (@_YukiOgawa) <a href="https://twitter.com/_YukiOgawa/status/1953420330888024250?ref_src=twsrc%5Etfw">August 7, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+- [SoundRampage 5周年](https://soundrampage.com/) 
+  - 2025年4月から2026年6月の間お休みしていますが、周年ということで参加してきました
+    - 久しぶりの参加なのに暖かく迎え入れてくれるクルーに感謝
+    - <blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E9%9F%B3%E6%9A%B4?src=hash&amp;ref_src=twsrc%5Etfw">#音暴</a><br>5周年おめでとう㊗️ <a href="https://t.co/tELlYPEkR2">pic.twitter.com/tELlYPEkR2</a></p>&mdash; moja (@moja017) <a href="https://twitter.com/moja017/status/1956949460233117829?ref_src=twsrc%5Etfw">August 17, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    - VJはめちゃくちゃ下手になってて、すまんという感じ
 - [Platform Engineering Meetup Online #4](https://platformengineering.connpass.com/event/364213/)に参加
   - Platform Enginneringに興味を持ち出す。
 - 中之島会 第1回を開催
