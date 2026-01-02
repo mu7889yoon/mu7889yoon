@@ -1,6 +1,6 @@
 +++
 date = '2026-01-02T23:47:32+09:00'
-draft = true
+draft = false
 tags = ['tips', 'tech', 'cdk', 'iac', 'cloudformation', 'terraform', 'cf2tf']
 description = 'AWS CDKで作ったCloudFormationをcf2tfでTerraformへ変換してみた記録。'
 title = '書き初めでAWS CDK書いてcf2tf使ってTerraformに変換したかった'
