@@ -53,7 +53,7 @@ title = '2025年の振り返り'
 ## 2025年4月
 
 - 忙殺
-- [JAWS-UG 京都支部 AWSを活用したマルチテナントSaaSの設計と実践~実践編~](https://jawsug-kyoto.connpass.com/event/349442/)に参加
+- [JAWS-UG 京都支部 AWSを活用したマルチテナントSaaSの設計と実践 実践編](https://jawsug-kyoto.connpass.com/event/349442/)に参加
   - 参加のつもりがハンズオンの講師になってた
     - [AWS CDKのハンズオン](https://speakerdeck.com/mu7889yoon/cdkhanzuon)
 - 社内のコミュニティを立ち上げ始めた
