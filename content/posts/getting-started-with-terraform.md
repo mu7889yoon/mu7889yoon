@@ -431,10 +431,8 @@ API GatewayのデプロイIDのみが変更された状態になっておりま�
 
 AWSCDKで作ったAPI Gateway / SQS / Lambda構成を、cf2tfでterraformへ移行する流れを検証した。
 
-cf2tfで生成されたterraformのファイルでimportはCloudFormationの物理IDで概ね大丈夫だったが、IAMやLambda、API Gateway周りのスキーマ差分修正が多かった。
+cf2tfはCloudFormationの論理IDとterraformのresource idが対応するため、importは非常にやりやすかったです。cf2tfプロジェクトを色々お手伝いしようかなと思いました。
 
-cf2tfはCloudFormationの論理IDとterraformのresource idが対応するため、importは非常にやりやすかったです。色々お手伝いしようと思います。
-
-terraformの宣言的な書き方や依存関係を意識しなくていい点も良く、CDKからterraformへの移行感覚を掴めました。
+terraformの話でいくと、terraformの宣言的な書き方や依存関係を意識しなくていい点も良く、CDKからterraformへの移行感覚を掴めました。
 
 近いうちにもうちょっと複雑な構成にチャレンジしてみようと思います。
