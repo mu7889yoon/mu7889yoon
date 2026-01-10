@@ -34,7 +34,7 @@ title = 'キャッチアップしていきたい技術たち(2025→2026年末�
 - pwa
   - github pagesで作りたい
 - terraform
-  - cf2tfとか触りたい
+  - [Terraformに入門する](/posts/getting-started-with-terraform/)
 - cloudformation import
 - parquet / iceberg / s3 tables
   - [ParquetとAIエージェントで無駄な出費を特定してみる](/posts/i-want-to-detect-money-wasted-with-parquet/)

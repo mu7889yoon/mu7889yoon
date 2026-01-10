@@ -1,7 +1,7 @@
 +++
 date = '2026-01-08T19:12:37+09:00'
 draft = false
-tags = ['tech', 'cdk', 'terraform', 'cloudformation', 'cf2tf', 'iac', 'backlog']
+tags = ['tech', 'cdk', 'terraform', 'cloudformation', 'cf2tf', 'iac', 'backlog', 'catch-up-2025-2026-vacation']
 description = 'AWS CDKで作った構成をcf2tfでTerraformへ移行し、validate/import/planまでの手順とハマりどころをまとめました。'
 title = 'Terraformに入門する'
 +++
