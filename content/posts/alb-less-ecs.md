@@ -16,27 +16,21 @@ title = 'ECSをALBなしでお得に使いたいやん？'
 
 大体こんな感じの思想で選んでいます。
 
-で、とりあえずECSを選択すると立ちはだかるのがALB
-
-ALBは時間課金＋通信料がかかります。
+で、とりあえずECSを選択すると立ちはだかるのがALB、ALBは時間課金＋通信料がかかります。
 
 個人的な用途なのに、毎月15 USD以上の固定費は正直つらい......
 
-使う時だけ起動にしても、ALBは起動しっぱなしなので、節約の恩恵が薄いです。
+タスクを使う時だけ起動にしても、ALBは起動しっぱなしなので、節約の恩恵がめちゃくちゃ薄いです。
 
 ということで、今回は API Gateway HTTP API をロードバランサーっぽく使ってECSを動かしてみます。
 
-やりたいことはシンプルで、ざっくり以下です。
+やりたいことはざっくり以下です。
 
 - API Gateway → VPC Link → Cloud Map（Service Discovery） → ECS（Fargate）
 
 この構成自体は、2020年にAWSアーキテクチャブログで公開された記事をベースに構築していきます。
 
 [Field Notes: Integrating HTTP APIs with AWS Cloud Map and Amazon ECS services](https://aws.amazon.com/jp/blogs/architecture/field-notes-integrating-http-apis-with-aws-cloud-map-and-amazon-ecs-services/)
-
-## 構成図
-
-
 
 ### AWS Cloud Map とは
 
@@ -72,6 +66,8 @@ IPアドレスが異なっています、ロードバランシングされてい
 
 大阪リージョンでの概算です。
 
+
+
 | Service | Cost per month |
 | - | - |
 | Fargate (0.25 vCPU, 0.5 GB) | 11.25 USD |
@@ -79,7 +75,7 @@ IPアドレスが異なっています、ロードバランシングされてい
 | ECR | 1.08 USD |
 | **Total** | **30.08 USD** |
 
-これが
+これが、ALBからAPI Gateway + Cloud Mapの構成に移行することで...
 
 | Service | Cost per month |
 | - | - |
@@ -90,18 +86,18 @@ IPアドレスが異なっています、ロードバランシングされてい
 | Route 53 Private Hosted Zone | 0.50 USD |
 | **Total** | **12.83 USD** |
 
-こうなる。
+こうなります、さらに追加でGraviton(Arm)にすると、もっと安くなります。
 
-| Service                          | Cost per month |
-| -------------------------------- | -------------- |
-| Fargate (0.25 vCPU, 0.5 GB, Arm) | 8.99 USD       |
-| ECR                              | 1.08 USD       |
-| API Gateway    | ≒ 0 USD        |
-| Cloud Map   | ≒ 0 USD        |
-| Route 53 Private Hosted Zone     | 0.50 USD       |
-| Total                            | 10.57 USD      |
+| Service | Cost per month |
+| - | - |
+| Fargate (0.25 vCPU, 0.5 GB, Arm) | 8.99 USD |
+| ECR  | 1.08 USD |
+| API Gateway | ≒ 0 USD |
+| Cloud Map | ≒ 0 USD |
+| Route 53 Private Hosted Zone | 0.50 USD |
+| **Total** | **10.57 USD** |
 
-さらにGraviton(Arm)にすると、もっと安くなります。
+コストを従来の構成の1/3まで減らすことができで大満足です。
 
 今までも使う時だけタスク起動はやっていましたが、ALBは常時起動なので固定費が残り続けて、節約の恩恵が薄かったんですよね。
 
