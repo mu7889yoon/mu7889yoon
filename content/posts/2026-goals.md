@@ -15,8 +15,10 @@ title = '2026年の抱負'
 - oss コントリビュート 10件
 - 登壇 12回
 - TBA (エクササイズ系)
-- TBA (開発ツール系)
-- TBA (コミュニティ系)
+- statelyの公開(開発ツール系)
+  - [stately.asl](https://github.com/mu7889yoon/stately.asl)
+- AWS麻雀v2(コミュニティ系)
+  - [JAWS DAYS 2026](https://jawsdays2026.jaws-ug.jp/staff/committee/#:~:text=Yuta%20Nakamura%20(yoon))
 
 ## 技術以外のアウトプット活動
 - 映像屋さんもゆっくり復帰していきたい
