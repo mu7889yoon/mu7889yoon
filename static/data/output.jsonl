@@ -18,8 +18,9 @@
 {"date":"2025-11-27","type":"organizer","note":"中之島会 第3回"}
 {"date":"2025-12-11","type":"lt","note":"nakanoshima.dev 忘年会 登壇"}
 {"date":"2025-12-12","type":"lt","url":"https://speakerdeck.com/mu7889yoon/jaws-ugda-ban-wang-nian-mian-qiang-hui-fsf-awsaruaru","note":"JAWS-UG大阪 忘年勉強会 FSF"}
-{"date":"2025-12-20","type":"other","url":"https://github.com/aws/aws-cdk/pull/36462", "note":"AWS CDKにPR",}
+{"date":"2025-12-20","type":"other","url":"https://github.com/aws/aws-cdk/pull/36462", "note":"AWS CDKにPR"}
 {"date":"2025-12-29","type":"seeds-blog","url":"https://www.seeds-std.co.jp/blog/creators/ecs-managed-spot-instance/","note":"ECS Managed Instance Spot Instance"}
 {"date":"2025-12-31","type":"seeds-blog","url":"https://www.seeds-std.co.jp/blog/creators/try-reinforcement-fine-tuning/","note":"Bedrock Reinforcement-Fine tuning"}
 {"date":"2026-01-13","type":"other","url":"https://github.com/aws/aws-cdk/pull/36677", "note":"AWS CDKにPR"}
 {"date":"2026-01-14","type":"seeds-blog","url":"https://www.seeds-std.co.jp/blog/creators/contributing-to-aws-cdk/", "note":"AWS CDKにコントリビュートしてみた"}
+{"date":"2026-01-16","type":"lt","note":"母校で登壇"}
