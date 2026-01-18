@@ -1,6 +1,6 @@
 +++
 date = '2026-01-17T15:20:37+09:00'
-draft = true
+draft = false
 tags = ['tech', 'cdk', 'cloudformation', 'catch-up-2025-2026-vacation']
 description = '手動で作成したAWSリソースをCloudFormationやAWS CDKで管理するプロセスを実践し、過程での学びを共有します。'
 title = '手動で作ったリソースをCloudFormationのスキャンやCDK importを使って取り込む'
