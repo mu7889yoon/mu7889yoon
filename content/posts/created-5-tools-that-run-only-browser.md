@@ -1,7 +1,7 @@
 +++
 date = '2026-01-10T16:31:10+09:00'
 draft = false
-tags = ['tech', 'chrome', 'web api', 'wasm']
+tags = ['tech', 'chrome', 'web api', 'wasm', 'catch-up-2025-2026-vacation']
 description = 'Webブラウザだけで完結する便利なツールが5つ作りましたので、そのご紹介'
 title = 'ブラウザだけで完結する自作ツール5つの紹介'
 +++
