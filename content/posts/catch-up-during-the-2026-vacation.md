@@ -26,6 +26,7 @@ title = 'キャッチアップしていきたい技術たち(2025→2026年末�
 - hono
   - [Honoでカウンターのバックエンドを作る](/posts/creating-the-backend-of-the-counter-with-hono)
 - ご家庭FaaS
+  - [ご家庭FaaSを作ろう、そしてLambda、GASのありがたみを知ろう。](/posts/running-FaaS-at-home/)
 - rust
   - moonbit
     - wasmの文脈でもある
@@ -38,6 +39,7 @@ title = 'キャッチアップしていきたい技術たち(2025→2026年末�
 - terraform
   - [Terraformに入門する](/posts/getting-started-with-terraform/)
 - cloudformation import
+  - [手動で作ったリソースをCloudFormationのスキャンやCDK importを使って取り込む](/posts/importing-manually-created-resources-with-cdk-import/)
 - parquet / iceberg / s3 tables
   - [ParquetとAIエージェントで無駄な出費を特定してみる](/posts/i-want-to-detect-money-wasted-with-parquet/)
 - chromeの埋め込みAI
