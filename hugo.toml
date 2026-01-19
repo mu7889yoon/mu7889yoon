@@ -1,6 +1,7 @@
 baseURL = 'https://mu7889yoon.github.io/'
 languageCode = 'ja-jp'
 title = 'よ〜んの雑記'
+enableRobotsTXT = false
 
 [markup.goldmark.renderer]
   unsafe = true
